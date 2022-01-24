@@ -1,0 +1,33 @@
+{
+    "name": "bdereta/sendmail-be",
+    "description": "Laravel Package for integrating Sendmail Backend API with Laravel Mailable",
+    "type": "laravel-package",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "BDereta\\SendmailBe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Boris Dereta",
+            "email": "boris.dereta@gce.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ext-json": "*",
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^7.0|^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BDereta\\SendmailBeServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
