@@ -14,7 +14,8 @@ package enables your Laravel instance to utilize [API-sendmail-be](https://dev.a
    * MAIL_URL=https://mkt-api.gcu.edu/sendmail-be/v1/send
    * MAIL_API_KEY= (see [Sendmail-BE repo for instructions on how to obtain an API key](https://dev.azure.com/gcedigitalmarketing/Web%20Marketing/_git/API-sendmail-be?anchor=managing-sendmail-api-keys) )
 
-Note: MAIL_URL can be optional because the production url is defaulted in the config. However, you can define the QA/DEV url if you need to test your application in different environments.
+
+Note: **MAIL_URL** is optional because the production url is set as the default url in the package 'services' config. However, feel free to define QA or DEV url if you need to test your application in different environments.
 
 #### Usage
 
