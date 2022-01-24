@@ -16,12 +16,10 @@ class SendmailBeServiceProvider extends MailServiceProvider
     public function register()
     {
         // add mail config
-        $mail = realpath($raw = __DIR__ . '/../config/mail.php') ?: $raw;
-        $this->mergeConfigFrom($mail, 'mail');
+        $this->mergeConfigFrom(__DIR__ . '/../config/mail.php');
 
         // add services config
-        $services = realpath($raw = __DIR__ . '/../config/services.php') ?: $raw;
-        $this->mergeConfigFrom($services, 'mail');
+        $this->mergeConfigFrom(__DIR__ . '/../config/services.php');
 
         $this->app->singleton('mail.manager', function($app) {
             return new SendmailBeMailManager($app);
