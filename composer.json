@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BDereta\\SendmailBeServiceProvider"
+                "BDereta\\SendmailBe\\SendmailBeServiceProvider"
             ]
         }
     },
