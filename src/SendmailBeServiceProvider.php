@@ -1,6 +1,6 @@
 <?php
 
-namespace Bdereta\SendmailBe;
+namespace BDereta\SendmailBe;
 
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Mail\MailServiceProvider;

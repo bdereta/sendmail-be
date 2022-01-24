@@ -1,6 +1,6 @@
 <?php
 
-namespace Bdereta\SendmailBe;
+namespace BDereta\SendmailBe;
 
 use Exception;
 use Illuminate\Mail\Transport\Transport;
