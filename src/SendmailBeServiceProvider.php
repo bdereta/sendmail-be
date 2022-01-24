@@ -64,7 +64,7 @@ class SendmailBeServiceProvider extends MailServiceProvider
                 continue;
             }
 
-            if (! Arr::exists($merging, $key)) {
+            if (! \Arr::exists($merging, $key)) {
                 continue;
             }
 
