@@ -9,20 +9,6 @@ class SendmailBeServiceProvider extends MailServiceProvider
 {
 
     /**
-     * Bootstrap any package services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        // add mail config
-        $this->mergeConfigFrom(__DIR__ . '/../config/mail.php', 'mail');
-
-        // add services config
-        $this->mergeConfigFrom(__DIR__ . '/../config/services.php', 'services');
-    }
-
-    /**
      * Boot the service provider.
      *
      * @return void
@@ -30,11 +16,18 @@ class SendmailBeServiceProvider extends MailServiceProvider
     public function register()
     {
 
+        // add mail config
+        $this->mergeConfigFrom(__DIR__ . '/../config/mail.php', 'mail');
+
+        // add services config
+        $this->mergeConfigFrom(__DIR__ . '/../config/services.php', 'services');
+
+        // initiate MailManager
         $this->app->singleton('mail.manager', function($app) {
             return new SendmailBeMailManager($app);
         });
 
-        // Copied from Illuminate\Mail\MailServiceProvider
+        // create mailer
         $this->app->bind('mailer', function ($app) {
             return $app->make('mail.manager')->mailer();
         });
