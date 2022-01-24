@@ -23,15 +23,6 @@ class SendmailBeServiceProvider extends MailServiceProvider
         $services = realpath($raw = __DIR__ . '/../config/services.php') ?: $raw;
         $this->mergeConfigFrom($services, 'mail');
 
-    }
-
-    /**
-     * Register Illuminate mailer instance.
-     *
-     * @return void
-     */
-    protected function registerIlluminateMailer()
-    {
         $this->app->singleton('mail.manager', function($app) {
             return new SendmailBeMailManager($app);
         });
@@ -40,6 +31,7 @@ class SendmailBeServiceProvider extends MailServiceProvider
         $this->app->bind('mailer', function ($app) {
             return $app->make('mail.manager')->mailer();
         });
+
     }
 
 }
