@@ -7,6 +7,7 @@ use Illuminate\Mail\MailServiceProvider;
 
 class SendmailBeServiceProvider extends MailServiceProvider
 {
+    protected $recursivelyMergeConfigs = true;
 
     /**
      * Boot the service provider.
